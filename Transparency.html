@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NXN Transparency — On-Chain Data</title>
+<meta name="description" content="NXN transparency page with on-chain supply, rewards and burn data on TON blockchain.">
+
+<style>
+:root {
+  --bg: #050708;
+  --card: rgba(15, 23, 42, 0.85);
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --green: #22c55e;
+  --border: rgba(34,197,94,0.25);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background:
+    radial-gradient(800px 400px at 20% -10%, rgba(34,197,94,0.18), transparent 60%),
+    radial-gradient(900px 500px at 80% 10%, rgba(16,185,129,0.12), transparent 60%),
+    linear-gradient(180deg, #030806 0%, #050708 40%, #020403 100%);
+  color: var(--text);
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px 100px;
+}
+h1 {
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+.subtitle {
+  color: var(--muted);
+  max-width: 720px;
+  margin-bottom: 50px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 22px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 24px;
+}
+.card h3 {
+  margin: 0 0 8px;
+  color: var(--green);
+}
+.card p {
+  margin: 0;
+  font-size: 15px;
+}
+.small {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 8px;
+}
+a {
+  color: var(--green);
+  text-decoration: none;
+}
+section { margin-top: 80px; }
+footer {
+  margin-top: 120px;
+  border-top: 1px solid var(--border);
+  padding-top: 30px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--muted);
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<h1>NXN Transparency</h1>
+<p class="subtitle">
+This page provides verifiable information about NXN on-chain supply,
+reward distribution and burn mechanics on the TON blockchain.
+</p>
+
+<section>
+  <div class="grid">
+    <div class="card">
+      <h3>Total Supply</h3>
+      <p>5,000,000,000 NXN</p>
+      <p class="small">Fixed supply • TON blockchain</p>
+    </div>
+
+    <div class="card">
+      <h3>NXN Distributed</h3>
+      <p>— update —</p>
+      <p class="small">Total on-chain rewards sent to players</p>
+    </div>
+
+    <div class="card">
+      <h3>NXN Burned</h3>
+      <p>— update —</p>
+      <p class="small">Permanently burned on-chain tokens</p>
+    </div>
+
+    <div class="card">
+      <h3>Annual Reward Cap</h3>
+      <p>≤ 300,000 NXN</p>
+      <p class="small">Maximum possible yearly distribution</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>On-Chain Verification</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Token Contract</h3>
+      <p><a href="https://tonscan.org/jetton/EQBY-vwahbkyTFwdYaitBC9GhZsqMsaIOfQ4iv63j1eBIMuC#events" target="_blank">View on TON Explorer</a></p>
+      <p class="small">Official NXN smart contract</p>
+    </div>
+
+    <div class="card">
+      <h3>Burn Address</h3>
+      <p><a href="https://tonscan.org/address/UQD-JMBHsxBnO9acm-cJfqjZ-5Jgx5kvWqVDWqG3Go6Y9Zi5" target="_blank">View Burn Transactions</a></p>
+      <p class="small">Irrecoverable burn wallet</p>
+    </div>
+
+    <div class="card">
+      <h3>Reward Wallet</h3>
+      <p><a href="https://tonscan.org/address/EQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM9c" target="_blank">View Reward Transfers</a></p>
+      <p class="small">Distribution wallet</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Cycle Rules</h2>
+  <div class="grid">
+    <div class="card"><p>7 days competitive cycle</p></div>
+    <div class="card"><p>Top 500 players receive rewards</p></div>
+    <div class="card"><p>2-day claim window</p></div>
+    <div class="card"><p>Unclaimed rewards are burned</p></div>
+  </div>
+</section>
+
+<footer>
+  NXN is a GameFi project. In-game NXN has no monetary value.<br>
+  Data is updated manually after each completed cycle.
+</footer>
+
+</div>
+</body>
+</html>
